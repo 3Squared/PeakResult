@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "Result"
+  s.name         = "SQKResult"
   s.version      = "0.0.1"
   s.summary      = "An enum that contains a result."
   s.homepage     = "https://gitlab.3squared.com/samoakley/Result"
