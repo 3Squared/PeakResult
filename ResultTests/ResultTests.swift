@@ -13,6 +13,7 @@ class ResultTests: XCTestCase {
     
     public enum TestError: Error {
         case justATest
+        case alsoATest
     }
     
     func testResultResolution() {
@@ -57,4 +58,70 @@ class ResultTests: XCTestCase {
         }
     }
     
+    func testMappingSuccess() {
+        let expect = expectation(description: "")
+        let niceResult: Result<String> = Result { return "Hello!" }
+        
+        niceResult.map { string in
+            XCTAssertEqual(string, "Hello!")
+            expect.fulfill()
+        }
+        
+        waitForExpectations(timeout: 0)
+    }
+    
+    func testMappingFailure() {
+        let expect = expectation(description: "")
+        let throwingResult: Result<String> = Result { throw TestError.justATest }
+        
+        throwingResult.map { string in
+            XCTFail()
+            }.mapError { error in
+                XCTAssertNotNil(error)
+                expect.fulfill()
+        }
+        
+        waitForExpectations(timeout: 0)
+    }
+    
+    func testMappingChaining() {
+        let niceResult = Result { return 0 }
+        
+        let result = try! niceResult.map({ value in
+            return value + 1
+        }).map({ value -> String in
+            return "Hello, \(value)!"
+        }).resolve()
+        
+        XCTAssertEqual(result, "Hello, 1!")
+    }
+    
+    func testFlatMappingSuccess() {
+        let niceResult: Result<String> = Result { return "Hello!" }
+        
+        let result = try! niceResult.flatMap { string -> Result<String> in
+            return Result { "Goodbye" }
+        }.resolve()
+        
+                
+        XCTAssertEqual(result, "Goodbye")
+    }
+
+    func testFlatMappingFailure() {
+        let throwingResult: Result<String> = Result { throw TestError.justATest }
+        
+        let result = throwingResult.flatMapError { error in
+            return Result { throw TestError.alsoATest }
+        }
+        
+        do {
+            let _ = try result.resolve()
+            XCTFail()
+        } catch {
+            XCTAssertNotNil(error)
+        }
+        
+    }
+
+
 }
