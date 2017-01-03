@@ -25,8 +25,8 @@ public enum Result<T> {
     /// - returns: The successful result of type T
     public func resolve() throws -> T {
         switch self {
-        case Result.success(let value): return value
-        case Result.failure(let error): throw error
+        case .success(let value): return value
+        case .failure(let error): throw error
         }
     }
     
@@ -40,9 +40,9 @@ public enum Result<T> {
     public init( _ throwingExpr: () throws -> T) {
         do {
             let value = try throwingExpr()
-            self = Result.success(value)
+            self = .success(value)
         } catch {
-            self = Result.failure(error)
+            self = .failure(error)
         }
     }
 }
