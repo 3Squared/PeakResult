@@ -37,7 +37,7 @@ public enum Result<T> {
     /// - parameter throwingExpr: A closure that returns a value of type T or throws
     ///
     /// - returns: A Result
-    public init( _ throwingExpr: (Void) throws -> T) {
+    public init( _ throwingExpr: () throws -> T) {
         do {
             let value = try throwingExpr()
             self = Result.success(value)
