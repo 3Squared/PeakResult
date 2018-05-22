@@ -46,8 +46,16 @@ public enum Result<T> {
         }
     }
     
+    
+    /// Returns a result containing the value of mapping the given closure
+    /// over the result's success value.
+    ///
+    /// - Parameter transform: A mapping closure. `transform` accepts the
+    ///   success value of the result as its parameter and returns or throws
+    ///   a transformed value of the same or of a different type.
+    /// - Returns: A result containing the transformed element.
     @discardableResult
-    func map<U>(_ transform: @escaping (T) -> U) -> Result<U> {
+    public func map<U>(_ transform: @escaping (T) -> U) -> Result<U> {
         switch self {
         case .success(let value):
             return Result<U> { return transform(value) }
@@ -56,8 +64,15 @@ public enum Result<T> {
         }
     }
 
+    /// Returns a result containing the value of mapping the given closure
+    /// over the result's failure error.
+    ///
+    /// - Parameter transform: A mapping closure. `transform` accepts the
+    ///   failure error of the result as its parameter and returns
+    ///   a transformed value of the same type or throws.
+    /// - Returns: A result containing the transformed element.
     @discardableResult
-    func mapError(_ transform: @escaping (Error) -> T) -> Result<T> {
+    public func mapError(_ transform: @escaping (Error) -> T) -> Result<T> {
         switch self {
         case .success(let value):
             return Result { return value }
@@ -66,13 +81,27 @@ public enum Result<T> {
         }
     }
     
+    /// Returns a result containing the value of mapping the given closure
+    /// over the result.
+    ///
+    /// - Parameter transform: A mapping closure. `transform` accepts the
+    ///   the result as its parameter and returns or throws
+    ///   a transformed result of the same or of a different type.
+    /// - Returns: A transformed result.
     @discardableResult
-    func flatMap<U>(_ transform: @escaping (T) -> Result<U>) -> Result<U> {
+    public func flatMap<U>(_ transform: @escaping (T) -> Result<U>) -> Result<U> {
         return Result.flatten(result: map(transform))
     }
     
+    /// Returns a result containing the value of mapping the given closure
+    /// over the result, only if the result contains an error.
+    ///
+    /// - Parameter transform: A mapping closure. `transform` accepts the
+    ///   the result as its parameter and returns or throws
+    ///   a transformed result of the same or of a different type.
+    /// - Returns: A transformed result.
     @discardableResult
-    func flatMapError(_ transform: @escaping (Error) -> Result<T>) -> Result<T> {
+    public func flatMapError(_ transform: @escaping (Error) -> Result<T>) -> Result<T> {
         switch self {
         case .success(let value):
             return Result { return value }
