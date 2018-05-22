@@ -1,4 +1,4 @@
-# THRNetwork
+# Result
 
 This is a Swift microframework providing a super-simple Result type.
 
