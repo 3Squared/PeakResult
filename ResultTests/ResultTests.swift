@@ -70,15 +70,15 @@ class ResultTests: XCTestCase {
         waitForExpectations(timeout: 0)
     }
     
-    func testMappingFailure() {
+    func testMappingError() {
         let expect = expectation(description: "")
         let throwingResult: Result<String> = Result { throw TestError.justATest }
         
         throwingResult.map { string in
             XCTFail()
-            }.mapError { error in
-                XCTAssertNotNil(error)
-                expect.fulfill()
+        }.mapError { error in
+            XCTAssertNotNil(error)
+            expect.fulfill()
         }
         
         waitForExpectations(timeout: 0)
@@ -107,7 +107,7 @@ class ResultTests: XCTestCase {
         XCTAssertEqual(result, "Goodbye")
     }
 
-    func testFlatMappingFailure() {
+    func testFlatMapErrorWithError() {
         let throwingResult: Result<String> = Result { throw TestError.justATest }
         
         let result = throwingResult.flatMapError { error in
@@ -120,7 +120,21 @@ class ResultTests: XCTestCase {
         } catch {
             XCTAssertNotNil(error)
         }
+    }
+    
+    func testFlatMapErrorWithSuccess() {
+        let niceResult: Result<String> = Result { return "Hello!" }
+
+        let result = niceResult.flatMapError { error in
+            XCTFail()
+            return Result { throw TestError.alsoATest }
+        }
         
+        do {
+            let _ = try result.resolve()
+        } catch {
+            XCTFail()
+        }
     }
 
 
