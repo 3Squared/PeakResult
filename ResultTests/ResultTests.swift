@@ -18,8 +18,8 @@ class ResultTests: XCTestCase {
     
     func testResultResolution() {
         // Both are same type even though one has a string and the other contains an error
-        let niceResult: Result<String> = Result { return "Hello!" }
-        let throwingResult: Result<String> = Result { throw TestError.justATest }
+        let niceResult = Result { return "Hello!" }
+        let throwingResult = Result { throw TestError.justATest }
         
         switch niceResult {
         case .success(let value):
@@ -60,7 +60,7 @@ class ResultTests: XCTestCase {
     
     func testMappingSuccess() {
         let expect = expectation(description: "")
-        let niceResult: Result<String> = Result { return "Hello!" }
+        let niceResult = Result { return "Hello!" }
         
         niceResult.map { string in
             XCTAssertEqual(string, "Hello!")
@@ -72,7 +72,7 @@ class ResultTests: XCTestCase {
     
     func testMappingError() {
         let expect = expectation(description: "")
-        let throwingResult: Result<String> = Result { throw TestError.justATest }
+        let throwingResult = Result { throw TestError.justATest }
         
         throwingResult.map { string in
             XCTFail()
@@ -97,7 +97,7 @@ class ResultTests: XCTestCase {
     }
     
     func testFlatMappingSuccess() {
-        let niceResult: Result<String> = Result { return "Hello!" }
+        let niceResult = Result { return "Hello!" }
         
         let result = try! niceResult.flatMap { string -> Result<String> in
             return Result { "Goodbye" }
@@ -108,7 +108,7 @@ class ResultTests: XCTestCase {
     }
 
     func testFlatMapErrorWithError() {
-        let throwingResult: Result<String> = Result { throw TestError.justATest }
+        let throwingResult = Result { throw TestError.justATest }
         
         let result = throwingResult.flatMapError { error in
             return Result { throw TestError.alsoATest }
@@ -123,7 +123,7 @@ class ResultTests: XCTestCase {
     }
     
     func testFlatMapErrorWithSuccess() {
-        let niceResult: Result<String> = Result { return "Hello!" }
+        let niceResult = Result { return "Hello!" }
 
         let result = niceResult.flatMapError { error in
             XCTFail()
