@@ -1,7 +1,7 @@
 
 ![Peak Result](result.png "Peak Result")
 
-Result is a Swift microframework providing a simple `Result` type. It is part of the [Peak Framework](#peak-framework).
+PeakResult is a Swift microframework providing a simple `Result` type. It is part of the [Peak Framework](#peak-framework).
 
 
 The Result type is very simple: it represents either success, with an associated value representing the successful result; or a failure, with an associated error. This is perfect to represent operations which can potentially fail.
