@@ -8,15 +8,15 @@
 
 Pod::Spec.new do |s|
 
-  s.name         = "THRResult"
+  s.name         = "PeakResult"
   s.version      = "1.0.1"
   s.summary      = "An enum that contains a result."
-  s.homepage     = "https://gitlab.3squared.com/iOSLibraries/THRResult"
+  s.homepage     = "https://gitlab.3squared.com/iOSLibraries/PeakResult"
   s.license      = { :type => 'Custom', :file => 'LICENCE' }
-  s.author             = { "Sam Oakley" => "sam.oakley@3squared.com" }
+  s.author       = { "Sam Oakley" => "sam.oakley@3squared.com" }
   s.platform     = :ios, "10.0"
-  s.source       = { :git => "git@gitlab.3squared.com:iOSLibraries/THRResult.git", :tag => s.version.to_s }
-  s.source_files = "Result", "Result/**/*.{h,m,swift}"
+  s.source       = { :git => "git@gitlab.3squared.com:iOSLibraries/PeakResult.git", :tag => s.version.to_s }
+  s.source_files = "PeakResult", "PeakResult/**/*.{h,m,swift}"
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4' }
 
 end

@@ -1,8 +1,12 @@
 # CHANGELOG
 
-The changelog for `THRResult`.
+The changelog for `PeakResult`.
 
 --------------------------------------
+
+2.0.0
+-----
+- Rename from `THRResult` to `PeakResult`.
 
 1.0.1
 -----
