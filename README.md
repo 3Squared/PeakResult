@@ -1,5 +1,5 @@
 
-![Peak Result](result.png "Peak Result")
+![Peak Result](PeakResult.png "Peak Result")
 
 PeakResult is a Swift microframework providing a simple `Result` type. It is part of the [Peak Framework](#peak-framework).
 
