@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "10.0"
   s.source       = { :git => "git@gitlab.3squared.com:MobileTeam/PeakResult.git", :tag => s.version.to_s }
   s.source_files = "PeakResult", "PeakResult/**/*.{h,m,swift}"
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4' }
+  s.swift_version = '4.2'
 
 end
