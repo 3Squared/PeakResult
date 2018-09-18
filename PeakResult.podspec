@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "PeakResult"
-  s.version      = "2.0.0"
+  s.version      = "2.1.0"
   s.summary      = "An enum that contains a result."
   s.homepage     = "https://gitlab.3squared.com/MobileTeam/PeakResult"
   s.license      = { :type => 'Custom', :file => 'LICENSE.md' }
