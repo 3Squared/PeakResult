@@ -137,5 +137,27 @@ class ResultTests: XCTestCase {
         }
     }
 
+    func testFoldingWithSuccess() {
+        let result = Result { return "Hello!" }
+        
+        let unwrapped = result.fold({ value in
+            return true
+        }) { error in
+            return false
+        }
+        
+        XCTAssertTrue(unwrapped)
+    }
+    
+    func testFoldingWithFailure() {
+        let result = Result { throw TestError.justATest }
 
+        let unwrapped = result.fold({ value in
+            return true
+        }) { error in
+            return false
+        }
+        
+        XCTAssertFalse(unwrapped)
+    }
 }

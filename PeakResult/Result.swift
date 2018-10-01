@@ -47,6 +47,22 @@ public enum Result<T> {
     }
     
     
+    /// Allows you to handle both success and failure of a result and return a value of the same type in either case.
+    ///
+    /// - Parameters:
+    ///   - success: A closure called with the value when the result is .success, returning an appropriate value or Void.
+    ///   - failure:  closure called with the error when the result is .failure, returning an appropriate value or Void.
+    @discardableResult
+    public func fold<U>(_ success: @escaping (T) -> U, _ failure: @escaping (Error) -> U) -> U {
+        switch self {
+        case .success(let value):
+            return success(value)
+        case .failure(let error):
+            return failure(error)
+        }
+    }
+    
+    
     /// Returns a result containing the value of mapping the given closure
     /// over the result's success value.
     ///
