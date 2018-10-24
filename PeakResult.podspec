@@ -6,9 +6,13 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/3squared/PeakResult"
   s.license      = { :type => 'Custom', :file => 'LICENSE.md' }
   s.author       = { "Sam Oakley" => "sam.oakley@3squared.com" }
-  s.platform     = :ios, "10.0"
   s.source       = { :git => "https://github.com/3squared/PeakResult.git", :tag => s.version.to_s }
-  s.source_files = "PeakResult", "PeakResult/**/*.{h,m,swift}"
   s.swift_version = '4.2'
+
+  s.ios.deployment_target = '10.0'
+  s.osx.deployment_target = '10.13'
+  s.source_files = "PeakResult", "PeakResult/Core/**/*.{h,m,swift}"
+  s.ios.source_files = "PeakResult/Platforms/iOS/**/*.{h,m,swift}"
+  s.osx.source_files = "PeakResult/Platforms/macOS/**/*.{h,m,swift}"
 
 end
