@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CBDC03941DEC717D00EA80EF /* PeakResult.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDC038A1DEC717D00EA80EF /* PeakResult.framework */; };
+		186A27F12180621000CBC156 /* PeakResult_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186A27E82180621000CBC156 /* PeakResult_macOS.framework */; };
+		186A28072180635A00CBC156 /* PeakResult.h in Headers */ = {isa = PBXBuildFile; fileRef = CBDC038D1DEC717D00EA80EF /* PeakResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		186A28082180643700CBC156 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC03A41DEC71A500EA80EF /* Result.swift */; };
+		186A28092180644F00CBC156 /* PeakResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC03981DEC717D00EA80EF /* PeakResultTests.swift */; };
+		CBDC03941DEC717D00EA80EF /* PeakResult_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDC038A1DEC717D00EA80EF /* PeakResult_iOS.framework */; };
 		CBDC03991DEC717D00EA80EF /* PeakResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC03981DEC717D00EA80EF /* PeakResultTests.swift */; };
 		CBDC039B1DEC717D00EA80EF /* PeakResult.h in Headers */ = {isa = PBXBuildFile; fileRef = CBDC038D1DEC717D00EA80EF /* PeakResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBDC03A51DEC71A500EA80EF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDC03A41DEC71A500EA80EF /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		186A27F22180621000CBC156 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBDC03811DEC717D00EA80EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 186A27E72180621000CBC156;
+			remoteInfo = "PeakResult-macOS";
+		};
 		CBDC03951DEC717D00EA80EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CBDC03811DEC717D00EA80EF /* Project object */;
@@ -24,16 +35,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CBDC038A1DEC717D00EA80EF /* PeakResult.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PeakResult.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		186A27E82180621000CBC156 /* PeakResult_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PeakResult_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		186A27EB2180621000CBC156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		186A27F02180621000CBC156 /* PeakResult-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PeakResult-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		186A27F72180621000CBC156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBDC038A1DEC717D00EA80EF /* PeakResult_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PeakResult_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDC038D1DEC717D00EA80EF /* PeakResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeakResult.h; sourceTree = "<group>"; };
 		CBDC038E1DEC717D00EA80EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CBDC03931DEC717D00EA80EF /* PeakResultTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeakResultTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBDC03931DEC717D00EA80EF /* PeakResult-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PeakResult-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDC03981DEC717D00EA80EF /* PeakResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeakResultTests.swift; sourceTree = "<group>"; };
 		CBDC039A1DEC717D00EA80EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBDC03A41DEC71A500EA80EF /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		186A27E52180621000CBC156 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		186A27ED2180621000CBC156 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				186A27F12180621000CBC156 /* PeakResult_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CBDC03861DEC717D00EA80EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -45,18 +75,85 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBDC03941DEC717D00EA80EF /* PeakResult.framework in Frameworks */,
+				CBDC03941DEC717D00EA80EF /* PeakResult_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		186A27FF218062B800CBC156 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CBDC03A41DEC71A500EA80EF /* Result.swift */,
+				CBDC038D1DEC717D00EA80EF /* PeakResult.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		186A2800218062BF00CBC156 /* Platforms */ = {
+			isa = PBXGroup;
+			children = (
+				186A2801218062C900CBC156 /* iOS */,
+				186A2802218062CE00CBC156 /* macOS */,
+			);
+			path = Platforms;
+			sourceTree = "<group>";
+		};
+		186A2801218062C900CBC156 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBDC038E1DEC717D00EA80EF /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		186A2802218062CE00CBC156 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				186A27EB2180621000CBC156 /* Info.plist */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		186A2803218062E500CBC156 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CBDC03981DEC717D00EA80EF /* PeakResultTests.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		186A2804218062EB00CBC156 /* Platforms */ = {
+			isa = PBXGroup;
+			children = (
+				186A2805218062F000CBC156 /* iOS */,
+				186A2806218062F600CBC156 /* macOS */,
+			);
+			path = Platforms;
+			sourceTree = "<group>";
+		};
+		186A2805218062F000CBC156 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBDC039A1DEC717D00EA80EF /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		186A2806218062F600CBC156 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				186A27F72180621000CBC156 /* Info.plist */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
 		CBDC03801DEC717D00EA80EF = {
 			isa = PBXGroup;
 			children = (
 				CBDC038C1DEC717D00EA80EF /* PeakResult */,
-				CBDC03971DEC717D00EA80EF /* PeakResultTests */,
+				CBDC03971DEC717D00EA80EF /* Unit Tests */,
 				CBDC038B1DEC717D00EA80EF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,8 +161,10 @@
 		CBDC038B1DEC717D00EA80EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CBDC038A1DEC717D00EA80EF /* PeakResult.framework */,
-				CBDC03931DEC717D00EA80EF /* PeakResultTests.xctest */,
+				CBDC038A1DEC717D00EA80EF /* PeakResult_iOS.framework */,
+				CBDC03931DEC717D00EA80EF /* PeakResult-iOSTests.xctest */,
+				186A27E82180621000CBC156 /* PeakResult_macOS.framework */,
+				186A27F02180621000CBC156 /* PeakResult-macOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,25 +172,32 @@
 		CBDC038C1DEC717D00EA80EF /* PeakResult */ = {
 			isa = PBXGroup;
 			children = (
-				CBDC038D1DEC717D00EA80EF /* PeakResult.h */,
-				CBDC03A41DEC71A500EA80EF /* Result.swift */,
-				CBDC038E1DEC717D00EA80EF /* Info.plist */,
+				186A27FF218062B800CBC156 /* Core */,
+				186A2800218062BF00CBC156 /* Platforms */,
 			);
 			path = PeakResult;
 			sourceTree = "<group>";
 		};
-		CBDC03971DEC717D00EA80EF /* PeakResultTests */ = {
+		CBDC03971DEC717D00EA80EF /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
-				CBDC03981DEC717D00EA80EF /* PeakResultTests.swift */,
-				CBDC039A1DEC717D00EA80EF /* Info.plist */,
+				186A2803218062E500CBC156 /* Core */,
+				186A2804218062EB00CBC156 /* Platforms */,
 			);
-			path = PeakResultTests;
+			path = "Unit Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		186A27E32180621000CBC156 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				186A28072180635A00CBC156 /* PeakResult.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CBDC03871DEC717D00EA80EF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -103,9 +209,45 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CBDC03891DEC717D00EA80EF /* PeakResult */ = {
+		186A27E72180621000CBC156 /* PeakResult-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CBDC039E1DEC717D00EA80EF /* Build configuration list for PBXNativeTarget "PeakResult" */;
+			buildConfigurationList = 186A27FD2180621000CBC156 /* Build configuration list for PBXNativeTarget "PeakResult-macOS" */;
+			buildPhases = (
+				186A27E32180621000CBC156 /* Headers */,
+				186A27E42180621000CBC156 /* Sources */,
+				186A27E52180621000CBC156 /* Frameworks */,
+				186A27E62180621000CBC156 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PeakResult-macOS";
+			productName = "PeakResult-macOS";
+			productReference = 186A27E82180621000CBC156 /* PeakResult_macOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		186A27EF2180621000CBC156 /* PeakResult-macOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 186A27FE2180621000CBC156 /* Build configuration list for PBXNativeTarget "PeakResult-macOSTests" */;
+			buildPhases = (
+				186A27EC2180621000CBC156 /* Sources */,
+				186A27ED2180621000CBC156 /* Frameworks */,
+				186A27EE2180621000CBC156 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				186A27F32180621000CBC156 /* PBXTargetDependency */,
+			);
+			name = "PeakResult-macOSTests";
+			productName = "PeakResult-macOSTests";
+			productReference = 186A27F02180621000CBC156 /* PeakResult-macOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CBDC03891DEC717D00EA80EF /* PeakResult-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBDC039E1DEC717D00EA80EF /* Build configuration list for PBXNativeTarget "PeakResult-iOS" */;
 			buildPhases = (
 				CBDC03851DEC717D00EA80EF /* Sources */,
 				CBDC03861DEC717D00EA80EF /* Frameworks */,
@@ -116,14 +258,14 @@
 			);
 			dependencies = (
 			);
-			name = PeakResult;
+			name = "PeakResult-iOS";
 			productName = Result;
-			productReference = CBDC038A1DEC717D00EA80EF /* PeakResult.framework */;
+			productReference = CBDC038A1DEC717D00EA80EF /* PeakResult_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CBDC03921DEC717D00EA80EF /* PeakResultTests */ = {
+		CBDC03921DEC717D00EA80EF /* PeakResult-iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CBDC03A11DEC717D00EA80EF /* Build configuration list for PBXNativeTarget "PeakResultTests" */;
+			buildConfigurationList = CBDC03A11DEC717D00EA80EF /* Build configuration list for PBXNativeTarget "PeakResult-iOSTests" */;
 			buildPhases = (
 				CBDC038F1DEC717D00EA80EF /* Sources */,
 				CBDC03901DEC717D00EA80EF /* Frameworks */,
@@ -134,9 +276,9 @@
 			dependencies = (
 				CBDC03961DEC717D00EA80EF /* PBXTargetDependency */,
 			);
-			name = PeakResultTests;
+			name = "PeakResult-iOSTests";
 			productName = ResultTests;
-			productReference = CBDC03931DEC717D00EA80EF /* PeakResultTests.xctest */;
+			productReference = CBDC03931DEC717D00EA80EF /* PeakResult-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -145,10 +287,18 @@
 		CBDC03811DEC717D00EA80EF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0810;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = 3Squared;
 				TargetAttributes = {
+					186A27E72180621000CBC156 = {
+						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
+					};
+					186A27EF2180621000CBC156 = {
+						CreatedOnToolsVersion = 10.0;
+						ProvisioningStyle = Automatic;
+					};
 					CBDC03891DEC717D00EA80EF = {
 						CreatedOnToolsVersion = 8.1;
 						LastSwiftMigration = 0900;
@@ -173,13 +323,29 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CBDC03891DEC717D00EA80EF /* PeakResult */,
-				CBDC03921DEC717D00EA80EF /* PeakResultTests */,
+				CBDC03891DEC717D00EA80EF /* PeakResult-iOS */,
+				CBDC03921DEC717D00EA80EF /* PeakResult-iOSTests */,
+				186A27E72180621000CBC156 /* PeakResult-macOS */,
+				186A27EF2180621000CBC156 /* PeakResult-macOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		186A27E62180621000CBC156 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		186A27EE2180621000CBC156 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CBDC03881DEC717D00EA80EF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,6 +363,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		186A27E42180621000CBC156 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				186A28082180643700CBC156 /* Result.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		186A27EC2180621000CBC156 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				186A28092180644F00CBC156 /* PeakResultTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CBDC03851DEC717D00EA80EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,14 +398,125 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		186A27F32180621000CBC156 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 186A27E72180621000CBC156 /* PeakResult-macOS */;
+			targetProxy = 186A27F22180621000CBC156 /* PBXContainerItemProxy */;
+		};
 		CBDC03961DEC717D00EA80EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CBDC03891DEC717D00EA80EF /* PeakResult */;
+			target = CBDC03891DEC717D00EA80EF /* PeakResult-iOS */;
 			targetProxy = CBDC03951DEC717D00EA80EF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		186A27F92180621000CBC156 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = PeakResult/Platforms/macOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.3squared.PeakResult-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		186A27FA2180621000CBC156 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = PeakResult/Platforms/macOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.3squared.PeakResult-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		186A27FB2180621000CBC156 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Unit Tests/Platforms/macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.3squared.PeakResult-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		186A27FC2180621000CBC156 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Unit Tests/Platforms/macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.3squared.PeakResult-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 		CBDC039C1DEC717D00EA80EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -275,6 +568,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -331,6 +625,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -350,11 +645,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PeakResult/Info.plist;
+				INFOPLIST_FILE = PeakResult/Platforms/iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.3squared.PeakResult;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.3squared.PeakResult-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -371,11 +666,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PeakResult/Info.plist;
+				INFOPLIST_FILE = PeakResult/Platforms/iOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.3squared.PeakResult;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.3squared.PeakResult-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -386,9 +681,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = PeakResultTests/Info.plist;
+				INFOPLIST_FILE = "Unit Tests/Platforms/iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.3squared.PeakResultTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.3squared.PeakResult-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -399,9 +694,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = PeakResultTests/Info.plist;
+				INFOPLIST_FILE = "Unit Tests/Platforms/iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.3squared.PeakResultTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.3squared.PeakResult-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -411,6 +706,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		186A27FD2180621000CBC156 /* Build configuration list for PBXNativeTarget "PeakResult-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				186A27F92180621000CBC156 /* Debug */,
+				186A27FA2180621000CBC156 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		186A27FE2180621000CBC156 /* Build configuration list for PBXNativeTarget "PeakResult-macOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				186A27FB2180621000CBC156 /* Debug */,
+				186A27FC2180621000CBC156 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CBDC03841DEC717D00EA80EF /* Build configuration list for PBXProject "PeakResult" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -420,7 +733,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CBDC039E1DEC717D00EA80EF /* Build configuration list for PBXNativeTarget "PeakResult" */ = {
+		CBDC039E1DEC717D00EA80EF /* Build configuration list for PBXNativeTarget "PeakResult-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CBDC039F1DEC717D00EA80EF /* Debug */,
@@ -429,7 +742,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CBDC03A11DEC717D00EA80EF /* Build configuration list for PBXNativeTarget "PeakResultTests" */ = {
+		CBDC03A11DEC717D00EA80EF /* Build configuration list for PBXNativeTarget "PeakResult-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CBDC03A21DEC717D00EA80EF /* Debug */,
