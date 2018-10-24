@@ -7,7 +7,16 @@
 //
 
 import XCTest
-@testable import PeakResult
+
+#if os(iOS)
+
+@testable import PeakResult_iOS
+
+#else
+
+@testable import PeakResult_macOS
+
+#endif
 
 class ResultTests: XCTestCase {
     
