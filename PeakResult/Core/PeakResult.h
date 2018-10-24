@@ -6,7 +6,15 @@
 //  Copyright © 2016 3Squared. All rights reserved.
 //
 
+#if os(iOS)
+
 #import <UIKit/UIKit.h>
+
+#else
+
+#import <Cocoa/Cocoa.h>
+
+#endif
 
 //! Project version number for PeakResult.
 FOUNDATION_EXPORT double PeakResultVersionNumber;
