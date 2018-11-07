@@ -51,7 +51,7 @@ public enum Result<T> {
     ///
     /// - Parameters:
     ///   - success: A closure called with the value when the result is .success, returning an appropriate value or Void.
-    ///   - failure:  closure called with the error when the result is .failure, returning an appropriate value or Void.
+    ///   - failure: A closure called with the error when the result is .failure, returning an appropriate value or Void.
     @discardableResult
     public func fold<U>(_ success: @escaping (T) -> U, _ failure: @escaping (Error) -> U) -> U {
         switch self {
