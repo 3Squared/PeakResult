@@ -6,11 +6,11 @@
 //  Copyright © 2016 3Squared. All rights reserved.
 //
 
-#if os(iOS)
+#if TARGET_OS_IPHONE
 
 #import <UIKit/UIKit.h>
 
-#else
+#elif TARGET_OS_MAC
 
 #import <Cocoa/Cocoa.h>
 
