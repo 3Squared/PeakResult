@@ -7,7 +7,6 @@
 //
 import Foundation
 
-
 /// An enum that contains a result. The result can be of type T, or it may be an error.
 ///
 /// - success: If the result is successful, will contain a non-optional value of type T
