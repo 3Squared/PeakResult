@@ -37,12 +37,12 @@
 /* Begin PBXFileReference section */
 		186A27E82180621000CBC156 /* PeakResult_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PeakResult_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		186A27EB2180621000CBC156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		186A27F02180621000CBC156 /* PeakResult-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PeakResult-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		186A27F02180621000CBC156 /* PeakResult_macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeakResult_macOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		186A27F72180621000CBC156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBDC038A1DEC717D00EA80EF /* PeakResult_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PeakResult_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDC038D1DEC717D00EA80EF /* PeakResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeakResult.h; sourceTree = "<group>"; };
 		CBDC038E1DEC717D00EA80EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CBDC03931DEC717D00EA80EF /* PeakResult-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PeakResult-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBDC03931DEC717D00EA80EF /* PeakResult_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeakResult_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDC03981DEC717D00EA80EF /* PeakResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeakResultTests.swift; sourceTree = "<group>"; };
 		CBDC039A1DEC717D00EA80EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBDC03A41DEC71A500EA80EF /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -162,9 +162,9 @@
 			isa = PBXGroup;
 			children = (
 				CBDC038A1DEC717D00EA80EF /* PeakResult_iOS.framework */,
-				CBDC03931DEC717D00EA80EF /* PeakResult-iOSTests.xctest */,
+				CBDC03931DEC717D00EA80EF /* PeakResult_iOSTests.xctest */,
 				186A27E82180621000CBC156 /* PeakResult_macOS.framework */,
-				186A27F02180621000CBC156 /* PeakResult-macOSTests.xctest */,
+				186A27F02180621000CBC156 /* PeakResult_macOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,7 +242,7 @@
 			);
 			name = "PeakResult-macOSTests";
 			productName = "PeakResult-macOSTests";
-			productReference = 186A27F02180621000CBC156 /* PeakResult-macOSTests.xctest */;
+			productReference = 186A27F02180621000CBC156 /* PeakResult_macOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		CBDC03891DEC717D00EA80EF /* PeakResult-iOS */ = {
@@ -278,7 +278,7 @@
 			);
 			name = "PeakResult-iOSTests";
 			productName = ResultTests;
-			productReference = CBDC03931DEC717D00EA80EF /* PeakResult-iOSTests.xctest */;
+			productReference = CBDC03931DEC717D00EA80EF /* PeakResult_iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -490,7 +490,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.3squared.PeakResult-macOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.2;
 			};
@@ -511,7 +511,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.3squared.PeakResult-macOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.2;
 			};
@@ -692,7 +692,7 @@
 				INFOPLIST_FILE = "Unit Tests/Platforms/iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.3squared.PeakResult-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -705,7 +705,7 @@
 				INFOPLIST_FILE = "Unit Tests/Platforms/iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.3squared.PeakResult-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
