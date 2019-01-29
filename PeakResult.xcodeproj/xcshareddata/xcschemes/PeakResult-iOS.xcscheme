@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CBDC03921DEC717D00EA80EF"
-               BuildableName = "PeakResult-iOSTests.xctest"
+               BuildableName = "PeakResult_iOSTests.xctest"
                BlueprintName = "PeakResult-iOSTests"
                ReferencedContainer = "container:PeakResult.xcodeproj">
             </BuildableReference>
